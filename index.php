@@ -1,16 +1,12 @@
 <?php
 
+require ('config.php');
 require('validation.php');
-
-define('MIN_TABLES', 2);
-define('MIN_VALUES', 2);
 
 if (isset($_GET['nbtables'], $_GET['nbvaleurs'])) {
     $old = $_GET;
     $data = validated();
 }
-
-
 ?>
 
 <!-- Début du template d’affichage -->
