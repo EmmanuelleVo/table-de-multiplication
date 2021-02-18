@@ -2,6 +2,8 @@
 
 require('validation.php');
 
+define('MIN_TABLES', 2);
+define('MIN_VALUES', 2);
 
 if (isset($_GET['nbtables'], $_GET['nbvaleurs'])) {
     $old = $_GET;
@@ -31,12 +33,12 @@ if (isset($_GET['nbtables'], $_GET['nbvaleurs'])) {
             <div class="form-group">
                 <label class="control-label" for="nbtables">Nombre de tables : </label>
                 <input class="form-control" id="nbtables" type="text" name="nbtables"
-                       value="<?= $old['nbtables'] ?? 0 ?>">
+                       value="<?= $old['nbtables'] ?? MIN_TABLES ?>">
             </div>
             <div class="form-group">
                 <label class="control-label" for="nbvaleurs">Nombre de valeurs : </label>
                 <input class="form-control" id="nbvaleurs" type="text" name="nbvaleurs"
-                       value="<?= $old['nbvaleurs'] ?? 0 //ici $old ?>">
+                       value="<?= $old['nbvaleurs'] ?? MIN_VALUES ?>">
             </div>
             <input type="submit">
         </form>
