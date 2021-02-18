@@ -24,7 +24,7 @@ function validated():array {
     }
 
 
-    //TODO virgule flottant, nombre négatif
+    //TODO virgule flottant
 
     $tableNum = (int)$_GET['nbtables'];
     $valueNum = (int)$_GET['nbvaleurs'];
