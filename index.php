@@ -31,12 +31,12 @@ if (isset($_GET['nbtables'], $_GET['nbvaleurs'])) {
             <div class="form-group">
                 <label class="control-label" for="nbtables">Nombre de tables : </label>
                 <input class="form-control" id="nbtables" type="text" name="nbtables"
-                       value="<?= $data['tableNum'] ?? 0 ?>">
+                       value="<?= $old['tableNum'] ?? 0 ?>">
             </div>
             <div class="form-group">
                 <label class="control-label" for="nbvaleurs">Nombre de valeurs : </label>
                 <input class="form-control" id="nbvaleurs" type="text" name="nbvaleurs"
-                       value="<?= $data['valueNum'] ?? 0 ?>">
+                       value="<?= $old['valueNum'] ?? 0 //ici $old ?>">
             </div>
             <input type="submit">
         </form>
